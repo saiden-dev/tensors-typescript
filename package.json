@@ -1,0 +1,31 @@
+{
+  "name": "tensors-client",
+  "version": "0.1.16",
+  "type": "module",
+  "description": "TypeScript client for tensors API",
+  "author": "saiden",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saiden-dev/tensors-client.git"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint src/",
+    "format": "biome format --write src/ *.ts",
+    "format:check": "biome format src/ *.ts",
+    "fix": "biome check --write --unsafe src/ *.ts",
+    "check": "npm run typecheck && biome check src/",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test": "npx tsx example.ts",
+    "prepublishOnly": "npm run check && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.0"
+  }
+}
