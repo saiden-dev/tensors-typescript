@@ -4,9 +4,9 @@
 import { CivitAIApi, Configuration, DatabaseApi, DownloadApi, GalleryApi } from './src'
 
 // Configure the client
+// Default basePath is https://tensors-api.saiden.dev (can be omitted)
 const config = new Configuration({
-  basePath: 'http://junkpile:51200',
-  apiKey: 'QB05BDB35lyo5CBZcyFOWPYVZYoVVl78', // X-API-Key header
+  apiKey: process.env.TENSORS_API_KEY, // X-API-Key header
 })
 
 // Create API instances

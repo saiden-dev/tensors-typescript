@@ -14,8 +14,11 @@ docs/LocationInner.md
 docs/MetadataUpdate.md
 docs/NsfwLevel.md
 docs/Period.md
+docs/Provider.md
 docs/ScanRequest.md
-docs/SortOrder.md
+docs/SearchApi.md
+docs/TensorsServerCivitaiRoutesSortOrder.md
+docs/TensorsServerSearchRoutesSortOrder.md
 docs/ValidationError.md
 package.json
 src/apis/CivitAIApi.ts
@@ -23,6 +26,7 @@ src/apis/DatabaseApi.ts
 src/apis/DefaultApi.ts
 src/apis/DownloadApi.ts
 src/apis/GalleryApi.ts
+src/apis/SearchApi.ts
 src/apis/index.ts
 src/index.ts
 src/models/CacheRequest.ts
@@ -33,8 +37,10 @@ src/models/LocationInner.ts
 src/models/MetadataUpdate.ts
 src/models/NsfwLevel.ts
 src/models/Period.ts
+src/models/Provider.ts
 src/models/ScanRequest.ts
-src/models/SortOrder.ts
+src/models/TensorsServerCivitaiRoutesSortOrder.ts
+src/models/TensorsServerSearchRoutesSortOrder.ts
 src/models/ValidationError.ts
 src/models/index.ts
 src/runtime.ts

@@ -117,7 +117,7 @@ async function example() {
     types: types_example,
     // string | Base model (optional)
     baseModels: baseModels_example,
-    // SortOrder | Sort order (optional)
+    // TensorsServerCivitaiRoutesSortOrder | Sort order (optional)
     sort: ...,
     // number | Max results (default: 25) (optional)
     limit: 5,
@@ -157,7 +157,7 @@ example().catch(console.error);
 | **query** | `string` | Search query | [Optional] [Defaults to `undefined`] |
 | **types** | `string` | Model type (Checkpoint, LORA, etc.) | [Optional] [Defaults to `undefined`] |
 | **baseModels** | `string` | Base model | [Optional] [Defaults to `undefined`] |
-| **sort** | `SortOrder` | Sort order | [Optional] [Defaults to `undefined`] [Enum: Most Downloaded, Highest Rated, Newest] |
+| **sort** | `TensorsServerCivitaiRoutesSortOrder` | Sort order | [Optional] [Defaults to `undefined`] [Enum: Most Downloaded, Highest Rated, Newest] |
 | **limit** | `number` | Max results (default: 25) | [Optional] [Defaults to `undefined`] |
 | **period** | `Period` | Time period filter | [Optional] [Defaults to `undefined`] [Enum: AllTime, Year, Month, Week, Day] |
 | **tag** | `string` | Filter by tag | [Optional] [Defaults to `undefined`] |
