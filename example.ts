@@ -1,7 +1,7 @@
 /**
  * Example usage of the tensors-client
  */
-import { CivitAIApi, Configuration, DatabaseApi, DownloadApi, GalleryApi } from './src'
+import { Configuration, DatabaseApi, DownloadApi, GalleryApi, SearchApi } from './src'
 
 // Configure the client
 // Default basePath is https://tensors-api.saiden.dev (can be omitted)
@@ -10,23 +10,22 @@ const config = new Configuration({
 })
 
 // Create API instances
-const civitai = new CivitAIApi(config)
+const search = new SearchApi(config)
 const database = new DatabaseApi(config)
 const gallery = new GalleryApi(config)
 const download = new DownloadApi(config)
 
 async function main() {
-  // Search CivitAI with extended params
-  console.log('=== Search CivitAI ===')
-  const searchResults = await civitai.searchModelsApiCivitaiSearchGet({
+  // Search models
+  console.log('=== Search Models ===')
+  const searchResults = await search.searchModelsApiSearchGet({
     types: 'LORA',
     baseModels: 'Illustrious',
     tag: 'anime',
-    period: 'Week' as any, // Period enum
     limit: 5,
   })
-  console.log('Found:', searchResults.items?.length, 'models (anime tag, this week)')
-  searchResults.items?.slice(0, 3).forEach((m: any) => {
+  console.log('Found:', (searchResults as any).items?.length, 'models')
+  ;(searchResults as any).items?.slice(0, 3).forEach((m: any) => {
     console.log(`  - ${m.id}: ${m.name}`)
   })
 
