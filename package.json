@@ -1,5 +1,5 @@
 {
-  "name": "tensors-client",
+  "name": "@saiden/tensors",
   "version": "0.1.16",
   "type": "module",
   "description": "TypeScript client for tensors API",
