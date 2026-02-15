@@ -12,44 +12,12 @@
  * Do not edit the class manually.
  */
 
-import type {
-  CommercialUse,
-  HTTPValidationError,
-  NsfwLevel,
-  Period,
-  TensorsServerCivitaiRoutesSortOrder,
-} from '../models/index'
-import {
-  CommercialUseFromJSON,
-  CommercialUseToJSON,
-  HTTPValidationErrorFromJSON,
-  HTTPValidationErrorToJSON,
-  NsfwLevelFromJSON,
-  NsfwLevelToJSON,
-  PeriodFromJSON,
-  PeriodToJSON,
-  TensorsServerCivitaiRoutesSortOrderFromJSON,
-  TensorsServerCivitaiRoutesSortOrderToJSON,
-} from '../models/index'
+import type { HTTPValidationError } from '../models/index'
+import { HTTPValidationErrorFromJSON, HTTPValidationErrorToJSON } from '../models/index'
 import * as runtime from '../runtime'
 
 export interface GetModelApiCivitaiModelModelIdGetRequest {
   modelId: number
-}
-
-export interface SearchModelsApiCivitaiSearchGetRequest {
-  query?: string | null
-  types?: string | null
-  baseModels?: string | null
-  sort?: TensorsServerCivitaiRoutesSortOrder
-  limit?: number | null
-  period?: Period | null
-  tag?: string | null
-  username?: string | null
-  page?: number | null
-  nsfw?: NsfwLevel | null
-  sfw?: boolean
-  commercial?: CommercialUse | null
 }
 
 /**
@@ -118,105 +86,6 @@ export class CivitAIApi extends runtime.BaseAPI {
       requestParameters,
       initOverrides,
     )
-    return await response.value()
-  }
-
-  /**
-   * Search CivitAI models.  Supports all CivitAI search parameters including filters for type, base model, time period, tags, creator, NSFW level, and commercial use.
-   * Search Models
-   */
-  async searchModelsApiCivitaiSearchGetRaw(
-    requestParameters: SearchModelsApiCivitaiSearchGetRequest,
-    initOverrides?: RequestInit | runtime.InitOverrideFunction,
-  ): Promise<runtime.ApiResponse<any>> {
-    const queryParameters: any = {}
-
-    if (requestParameters['query'] != null) {
-      queryParameters['query'] = requestParameters['query']
-    }
-
-    if (requestParameters['types'] != null) {
-      queryParameters['types'] = requestParameters['types']
-    }
-
-    if (requestParameters['baseModels'] != null) {
-      queryParameters['baseModels'] = requestParameters['baseModels']
-    }
-
-    if (requestParameters['sort'] != null) {
-      queryParameters['sort'] = requestParameters['sort']
-    }
-
-    if (requestParameters['limit'] != null) {
-      queryParameters['limit'] = requestParameters['limit']
-    }
-
-    if (requestParameters['period'] != null) {
-      queryParameters['period'] = requestParameters['period']
-    }
-
-    if (requestParameters['tag'] != null) {
-      queryParameters['tag'] = requestParameters['tag']
-    }
-
-    if (requestParameters['username'] != null) {
-      queryParameters['username'] = requestParameters['username']
-    }
-
-    if (requestParameters['page'] != null) {
-      queryParameters['page'] = requestParameters['page']
-    }
-
-    if (requestParameters['nsfw'] != null) {
-      queryParameters['nsfw'] = requestParameters['nsfw']
-    }
-
-    if (requestParameters['sfw'] != null) {
-      queryParameters['sfw'] = requestParameters['sfw']
-    }
-
-    if (requestParameters['commercial'] != null) {
-      queryParameters['commercial'] = requestParameters['commercial']
-    }
-
-    const headerParameters: runtime.HTTPHeaders = {}
-
-    if (this.configuration && this.configuration.apiKey) {
-      headerParameters['X-API-Key'] = await this.configuration.apiKey('X-API-Key') // APIKeyHeader authentication
-    }
-
-    if (this.configuration && this.configuration.apiKey) {
-      queryParameters['api_key'] = await this.configuration.apiKey('api_key') // APIKeyQuery authentication
-    }
-
-    const urlPath = `/api/civitai/search`
-
-    const response = await this.request(
-      {
-        path: urlPath,
-        method: 'GET',
-        headers: headerParameters,
-        query: queryParameters,
-      },
-      initOverrides,
-    )
-
-    if (this.isJsonMime(response.headers.get('content-type'))) {
-      return new runtime.JSONApiResponse<any>(response)
-    } else {
-      return new runtime.TextApiResponse(response) as any
-    }
-  }
-
-  /**
-   * Search CivitAI models.  Supports all CivitAI search parameters including filters for type, base model, time period, tags, creator, NSFW level, and commercial use.
-   * Search Models
-   */
-  async searchModelsApiCivitaiSearchGet(
-    requestParameters: SearchModelsApiCivitaiSearchGetRequest = {},
-    initOverrides?: RequestInit | runtime.InitOverrideFunction,
-  ): Promise<any> {
-    const response = await this.searchModelsApiCivitaiSearchGetRaw(requestParameters, initOverrides)
     return await response.value()
   }
 }

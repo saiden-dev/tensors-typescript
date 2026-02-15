@@ -12,18 +12,14 @@
  * Do not edit the class manually.
  */
 
-import type {
-  HTTPValidationError,
-  Provider,
-  TensorsServerSearchRoutesSortOrder,
-} from '../models/index'
+import type { HTTPValidationError, Provider, SortOrder } from '../models/index'
 import {
   HTTPValidationErrorFromJSON,
   HTTPValidationErrorToJSON,
   ProviderFromJSON,
   ProviderToJSON,
-  TensorsServerSearchRoutesSortOrderFromJSON,
-  TensorsServerSearchRoutesSortOrderToJSON,
+  SortOrderFromJSON,
+  SortOrderToJSON,
 } from '../models/index'
 import * as runtime from '../runtime'
 
@@ -38,7 +34,7 @@ export interface SearchModelsApiSearchGetRequest {
   commercial?: string | null
   page?: number | null
   pipeline?: string | null
-  sort?: TensorsServerSearchRoutesSortOrder
+  sort?: SortOrder
   limit?: number
   tag?: string | null
   author?: string | null

@@ -1,7 +1,7 @@
 
 # SortOrder
 
-Sort order options for CivitAI search.
+Sort order options.
 
 ## Properties
 

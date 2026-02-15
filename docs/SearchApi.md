@@ -56,7 +56,7 @@ async function example() {
     page: 56,
     // string | Pipeline tag - HuggingFace (text-to-image, etc.) (optional)
     pipeline: pipeline_example,
-    // TensorsServerSearchRoutesSortOrder | Sort order (optional)
+    // SortOrder | Sort order (optional)
     sort: ...,
     // number | Max results per provider (optional)
     limit: 56,
@@ -93,7 +93,7 @@ example().catch(console.error);
 | **commercial** | `string` | Commercial use - CivitAI (None, Image, Rent, Sell) | [Optional] [Defaults to `undefined`] |
 | **page** | `number` | Page number - CivitAI | [Optional] [Defaults to `undefined`] |
 | **pipeline** | `string` | Pipeline tag - HuggingFace (text-to-image, etc.) | [Optional] [Defaults to `undefined`] |
-| **sort** | `TensorsServerSearchRoutesSortOrder` | Sort order | [Optional] [Defaults to `undefined`] [Enum: downloads, rating, newest] |
+| **sort** | `SortOrder` | Sort order | [Optional] [Defaults to `undefined`] [Enum: downloads, rating, newest] |
 | **limit** | `number` | Max results per provider | [Optional] [Defaults to `25`] |
 | **tag** | `string` | Filter by tag | [Optional] [Defaults to `undefined`] |
 | **author** | `string` | Filter by author/creator | [Optional] [Defaults to `undefined`] |
