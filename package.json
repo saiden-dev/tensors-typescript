@@ -6,7 +6,7 @@
   "author": "saiden",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saiden-dev/tensors-client.git"
+    "url": "https://github.com/saiden-dev/tensors-typescript.git"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
