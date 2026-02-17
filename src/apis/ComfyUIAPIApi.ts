@@ -54,6 +54,12 @@ export interface ComfyuiHistoryListApiComfyuiHistoryGetRequest {
   limit?: number
 }
 
+export interface ComfyuiImageApiComfyuiImageFilenameGetRequest {
+  filename: string
+  subfolder?: string
+  folderType?: string
+}
+
 export interface ComfyuiWorkflowApiComfyuiWorkflowPostRequest {
   workflowRequest: WorkflowRequest
 }
@@ -276,6 +282,79 @@ export class ComfyUIAPIApi extends runtime.BaseAPI {
     initOverrides?: RequestInit | runtime.InitOverrideFunction,
   ): Promise<{ [key: string]: any }> {
     const response = await this.comfyuiHistoryListApiComfyuiHistoryGetRaw(
+      requestParameters,
+      initOverrides,
+    )
+    return await response.value()
+  }
+
+  /**
+   * Fetch a generated image from ComfyUI.  Use this to retrieve images by filename after generation.
+   * Comfyui Image
+   */
+  async comfyuiImageApiComfyuiImageFilenameGetRaw(
+    requestParameters: ComfyuiImageApiComfyuiImageFilenameGetRequest,
+    initOverrides?: RequestInit | runtime.InitOverrideFunction,
+  ): Promise<runtime.ApiResponse<any>> {
+    if (requestParameters['filename'] == null) {
+      throw new runtime.RequiredError(
+        'filename',
+        'Required parameter "filename" was null or undefined when calling comfyuiImageApiComfyuiImageFilenameGet().',
+      )
+    }
+
+    const queryParameters: any = {}
+
+    if (requestParameters['subfolder'] != null) {
+      queryParameters['subfolder'] = requestParameters['subfolder']
+    }
+
+    if (requestParameters['folderType'] != null) {
+      queryParameters['folder_type'] = requestParameters['folderType']
+    }
+
+    const headerParameters: runtime.HTTPHeaders = {}
+
+    if (this.configuration && this.configuration.apiKey) {
+      headerParameters['X-API-Key'] = await this.configuration.apiKey('X-API-Key') // APIKeyHeader authentication
+    }
+
+    if (this.configuration && this.configuration.apiKey) {
+      queryParameters['api_key'] = await this.configuration.apiKey('api_key') // APIKeyQuery authentication
+    }
+
+    let urlPath = `/api/comfyui/image/{filename}`
+    urlPath = urlPath.replace(
+      `{${'filename'}}`,
+      encodeURIComponent(String(requestParameters['filename'])),
+    )
+
+    const response = await this.request(
+      {
+        path: urlPath,
+        method: 'GET',
+        headers: headerParameters,
+        query: queryParameters,
+      },
+      initOverrides,
+    )
+
+    if (this.isJsonMime(response.headers.get('content-type'))) {
+      return new runtime.JSONApiResponse<any>(response)
+    } else {
+      return new runtime.TextApiResponse(response) as any
+    }
+  }
+
+  /**
+   * Fetch a generated image from ComfyUI.  Use this to retrieve images by filename after generation.
+   * Comfyui Image
+   */
+  async comfyuiImageApiComfyuiImageFilenameGet(
+    requestParameters: ComfyuiImageApiComfyuiImageFilenameGetRequest,
+    initOverrides?: RequestInit | runtime.InitOverrideFunction,
+  ): Promise<any> {
+    const response = await this.comfyuiImageApiComfyuiImageFilenameGetRaw(
       requestParameters,
       initOverrides,
     )

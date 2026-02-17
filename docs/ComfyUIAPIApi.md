@@ -8,6 +8,7 @@ All URIs are relative to *http://localhost*
 | [**comfyuiGenerateApiComfyuiGeneratePost**](ComfyUIAPIApi.md#comfyuigenerateapicomfyuigeneratepost) | **POST** /api/comfyui/generate | Comfyui Generate |
 | [**comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet**](ComfyUIAPIApi.md#comfyuihistorydetailapicomfyuihistorypromptidget) | **GET** /api/comfyui/history/{prompt_id} | Comfyui History Detail |
 | [**comfyuiHistoryListApiComfyuiHistoryGet**](ComfyUIAPIApi.md#comfyuihistorylistapicomfyuihistoryget) | **GET** /api/comfyui/history | Comfyui History List |
+| [**comfyuiImageApiComfyuiImageFilenameGet**](ComfyUIAPIApi.md#comfyuiimageapicomfyuiimagefilenameget) | **GET** /api/comfyui/image/{filename} | Comfyui Image |
 | [**comfyuiModelsApiComfyuiModelsGet**](ComfyUIAPIApi.md#comfyuimodelsapicomfyuimodelsget) | **GET** /api/comfyui/models | Comfyui Models |
 | [**comfyuiQueueApiComfyuiQueueGet**](ComfyUIAPIApi.md#comfyuiqueueapicomfyuiqueueget) | **GET** /api/comfyui/queue | Comfyui Queue |
 | [**comfyuiStatusApiComfyuiStatusGet**](ComfyUIAPIApi.md#comfyuistatusapicomfyuistatusget) | **GET** /api/comfyui/status | Comfyui Status |
@@ -282,6 +283,86 @@ example().catch(console.error);
 ### Return type
 
 **{ [key: string]: any; }**
+
+### Authorization
+
+[APIKeyHeader](../README.md#APIKeyHeader), [APIKeyQuery](../README.md#APIKeyQuery)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful Response |  -  |
+| **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## comfyuiImageApiComfyuiImageFilenameGet
+
+> any comfyuiImageApiComfyuiImageFilenameGet(filename, subfolder, folderType)
+
+Comfyui Image
+
+Fetch a generated image from ComfyUI.  Use this to retrieve images by filename after generation.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  ComfyUIAPIApi,
+} from 'tensors-client';
+import type { ComfyuiImageApiComfyuiImageFilenameGetRequest } from 'tensors-client';
+
+async function example() {
+  console.log("🚀 Testing tensors-client SDK...");
+  const config = new Configuration({ 
+    // To configure API key authorization: APIKeyHeader
+    apiKey: "YOUR API KEY",
+    // To configure API key authorization: APIKeyQuery
+    apiKey: "YOUR API KEY",
+  });
+  const api = new ComfyUIAPIApi(config);
+
+  const body = {
+    // string
+    filename: filename_example,
+    // string | Subfolder within output directory (optional)
+    subfolder: subfolder_example,
+    // string | Folder type: output, input, temp (optional)
+    folderType: folderType_example,
+  } satisfies ComfyuiImageApiComfyuiImageFilenameGetRequest;
+
+  try {
+    const data = await api.comfyuiImageApiComfyuiImageFilenameGet(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filename** | `string` |  | [Defaults to `undefined`] |
+| **subfolder** | `string` | Subfolder within output directory | [Optional] [Defaults to `&#39;&#39;`] |
+| **folderType** | `string` | Folder type: output, input, temp | [Optional] [Defaults to `&#39;output&#39;`] |
+
+### Return type
+
+**any**
 
 ### Authorization
 
