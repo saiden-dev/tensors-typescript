@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { CacheRequest } from 'tensors-client'
+import type { CacheRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

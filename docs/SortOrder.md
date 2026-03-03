@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { SortOrder } from 'tensors-client'
+import type { SortOrder } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

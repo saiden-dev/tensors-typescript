@@ -17,7 +17,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ModelsResponse } from 'tensors-client'
+import type { ModelsResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

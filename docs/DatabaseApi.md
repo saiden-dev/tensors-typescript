@@ -31,11 +31,11 @@ Fetch and cache full CivitAI model data.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { CacheModelApiDbCachePostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { CacheModelApiDbCachePostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -105,11 +105,11 @@ Get local file by ID.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { GetFileApiDbFilesFileIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetFileApiDbFilesFileIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -179,11 +179,11 @@ Get cached model by CivitAI ID.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { GetModelApiDbModelsCivitaiIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetModelApiDbModelsCivitaiIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -253,11 +253,11 @@ Get database statistics.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { GetStatsApiDbStatsGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetStatsApiDbStatsGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -318,11 +318,11 @@ Get trigger words for a local file by path.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { GetTriggersByPathApiDbTriggersGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetTriggersByPathApiDbTriggersGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -392,11 +392,11 @@ Get trigger words for a version by CivitAI version ID.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { GetTriggersByVersionApiDbTriggersVersionIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetTriggersByVersionApiDbTriggersVersionIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -466,11 +466,11 @@ Link unlinked local files to CivitAI by hash lookup.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { LinkFilesApiDbLinkPostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { LinkFilesApiDbLinkPostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -531,11 +531,11 @@ List all local files with CivitAI info.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { ListFilesApiDbFilesGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ListFilesApiDbFilesGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -596,11 +596,11 @@ Scan directory for safetensor files and add to database.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { ScanDirectoryApiDbScanPostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ScanDirectoryApiDbScanPostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -670,11 +670,11 @@ Search cached models offline.
 import {
   Configuration,
   DatabaseApi,
-} from 'tensors-client';
-import type { SearchModelsApiDbModelsGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { SearchModelsApiDbModelsGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",

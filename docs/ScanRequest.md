@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ScanRequest } from 'tensors-client'
+import type { ScanRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

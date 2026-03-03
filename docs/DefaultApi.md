@@ -20,11 +20,11 @@ Status
 import {
   Configuration,
   DefaultApi,
-} from 'tensors-client';
-import type { StatusStatusGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { StatusStatusGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new DefaultApi();
 
   try {

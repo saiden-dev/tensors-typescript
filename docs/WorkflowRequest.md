@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { WorkflowRequest } from 'tensors-client'
+import type { WorkflowRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

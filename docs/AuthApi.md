@@ -27,11 +27,11 @@ Show success page after login.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { AuthSuccessAuthSuccessGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { AuthSuccessAuthSuccessGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   try {
@@ -86,11 +86,11 @@ Redirect to GitHub OAuth.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { GithubAuthAuthGithubGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GithubAuthAuthGithubGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   const body = {
@@ -154,11 +154,11 @@ Handle GitHub OAuth callback.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { GithubCallbackAuthCallbackGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GithubCallbackAuthCallbackGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   const body = {
@@ -225,11 +225,11 @@ Show login page.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { LoginPageAuthLoginGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { LoginPageAuthLoginGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   const body = {
@@ -296,11 +296,11 @@ Clear session and redirect.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { LogoutAuthLogoutGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { LogoutAuthLogoutGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   const body = {
@@ -364,11 +364,11 @@ Verify a session token. Returns user info if valid.
 import {
   Configuration,
   AuthApi,
-} from 'tensors-client';
-import type { VerifyTokenAuthVerifyGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { VerifyTokenAuthVerifyGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const api = new AuthApi();
 
   const body = {

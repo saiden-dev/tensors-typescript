@@ -22,11 +22,11 @@ Get model details from CivitAI and cache to database.
 import {
   Configuration,
   CivitAIApi,
-} from 'tensors-client';
-import type { GetModelApiCivitaiModelModelIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetModelApiCivitaiModelModelIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",

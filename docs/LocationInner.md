@@ -10,7 +10,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { LocationInner } from 'tensors-client'
+import type { LocationInner } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

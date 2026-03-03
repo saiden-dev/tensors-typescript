@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { Provider } from 'tensors-client'
+import type { Provider } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

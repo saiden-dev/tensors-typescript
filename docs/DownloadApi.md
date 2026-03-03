@@ -24,11 +24,11 @@ Get status of a download.
 import {
   Configuration,
   DownloadApi,
-} from 'tensors-client';
-import type { GetDownloadStatusApiDownloadStatusDownloadIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetDownloadStatusApiDownloadStatusDownloadIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -98,11 +98,11 @@ List all active/recent downloads.
 import {
   Configuration,
   DownloadApi,
-} from 'tensors-client';
-import type { ListActiveDownloadsApiDownloadActiveGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ListActiveDownloadsApiDownloadActiveGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -163,11 +163,11 @@ Start a model download (async with progress tracking).
 import {
   Configuration,
   DownloadApi,
-} from 'tensors-client';
-import type { StartDownloadApiDownloadPostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { StartDownloadApiDownloadPostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",

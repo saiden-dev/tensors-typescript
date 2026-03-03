@@ -17,11 +17,14 @@ Name | Type
 `seed` | number
 `sampler` | string
 `scheduler` | string
+`vae` | string
+`loraName` | string
+`loraStrength` | number
 
 ## Example
 
 ```typescript
-import type { GenerateRequest } from 'tensors-client'
+import type { GenerateRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
@@ -35,6 +38,9 @@ const example = {
   "seed": null,
   "sampler": null,
   "scheduler": null,
+  "vae": null,
+  "loraName": null,
+  "loraStrength": null,
 } satisfies GenerateRequest
 
 console.log(example)

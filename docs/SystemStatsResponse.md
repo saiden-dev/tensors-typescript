@@ -13,7 +13,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { SystemStatsResponse } from 'tensors-client'
+import type { SystemStatsResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

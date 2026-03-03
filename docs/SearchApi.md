@@ -22,11 +22,11 @@ Search models across CivitAI and/or Hugging Face.  Returns results from selected
 import {
   Configuration,
   SearchApi,
-} from 'tensors-client';
-import type { SearchModelsApiSearchGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { SearchModelsApiSearchGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",

@@ -27,11 +27,11 @@ Delete an image and its metadata.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { DeleteImageApiImagesImageIdDeleteRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { DeleteImageApiImagesImageIdDeleteRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -101,11 +101,11 @@ Update metadata for an image.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { EditImageMetadataApiImagesImageIdEditPostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { EditImageMetadataApiImagesImageIdEditPostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -178,11 +178,11 @@ Get gallery statistics.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { GalleryStatsApiImagesStatsSummaryGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GalleryStatsApiImagesStatsSummaryGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -243,11 +243,11 @@ Get an image file by ID.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { GetImageApiImagesImageIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetImageApiImagesImageIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -317,11 +317,11 @@ Get metadata for an image.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { GetImageMetadataApiImagesImageIdMetaGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { GetImageMetadataApiImagesImageIdMetaGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -391,11 +391,11 @@ List images in the gallery, paginated.
 import {
   Configuration,
   GalleryApi,
-} from 'tensors-client';
-import type { ListImagesApiImagesGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ListImagesApiImagesGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",

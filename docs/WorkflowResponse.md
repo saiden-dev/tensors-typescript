@@ -16,7 +16,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { WorkflowResponse } from 'tensors-client'
+import type { WorkflowResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

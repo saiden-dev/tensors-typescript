@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { HTTPValidationError } from 'tensors-client'
+import type { HTTPValidationError } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

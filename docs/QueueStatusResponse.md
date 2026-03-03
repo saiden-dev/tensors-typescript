@@ -13,7 +13,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { QueueStatusResponse } from 'tensors-client'
+import type { QueueStatusResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

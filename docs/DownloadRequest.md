@@ -15,7 +15,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { DownloadRequest } from 'tensors-client'
+import type { DownloadRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {

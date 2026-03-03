@@ -30,11 +30,11 @@ Clear the ComfyUI queue.
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiClearQueueApiComfyuiQueueDeleteRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiClearQueueApiComfyuiQueueDeleteRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -95,11 +95,11 @@ Generate an image using a simple text-to-image workflow.  This uses the built-in
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiGenerateApiComfyuiGeneratePostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiGenerateApiComfyuiGeneratePostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -169,11 +169,11 @@ Get details for a specific history entry.
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -243,11 +243,11 @@ List ComfyUI generation history.
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiHistoryListApiComfyuiHistoryGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiHistoryListApiComfyuiHistoryGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -317,11 +317,11 @@ Fetch a generated image from ComfyUI.  Use this to retrieve images by filename a
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiImageApiComfyuiImageFilenameGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiImageApiComfyuiImageFilenameGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -397,11 +397,11 @@ List available models in ComfyUI.
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiModelsApiComfyuiModelsGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiModelsApiComfyuiModelsGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -462,11 +462,11 @@ Get ComfyUI queue status.
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiQueueApiComfyuiQueueGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiQueueApiComfyuiQueueGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -527,11 +527,11 @@ Get ComfyUI system stats (GPU, RAM, etc.).
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiStatusApiComfyuiStatusGetRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiStatusApiComfyuiStatusGetRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
@@ -592,11 +592,11 @@ Queue an arbitrary ComfyUI workflow for execution.  The workflow should be in Co
 import {
   Configuration,
   ComfyUIAPIApi,
-} from 'tensors-client';
-import type { ComfyuiWorkflowApiComfyuiWorkflowPostRequest } from 'tensors-client';
+} from '@saiden/tensors';
+import type { ComfyuiWorkflowApiComfyuiWorkflowPostRequest } from '@saiden/tensors';
 
 async function example() {
-  console.log("🚀 Testing tensors-client SDK...");
+  console.log("🚀 Testing @saiden/tensors SDK...");
   const config = new Configuration({ 
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
