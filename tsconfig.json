@@ -5,11 +5,13 @@
     "lib": ["ES2022", "DOM"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "rootDir": "src",
     "outDir": "dist",
     "typeRoots": [
       "node_modules/@types"
     ]
   },
+  "include": ["src/**/*"],
   "exclude": [
     "dist",
     "node_modules"
