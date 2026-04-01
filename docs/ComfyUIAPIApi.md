@@ -1,20 +1,18 @@
 # ComfyUIAPIApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**comfyuiClearQueueApiComfyuiQueueDelete**](ComfyUIAPIApi.md#comfyuiclearqueueapicomfyuiqueuedelete) | **DELETE** /api/comfyui/queue | Comfyui Clear Queue |
-| [**comfyuiGenerateApiComfyuiGeneratePost**](ComfyUIAPIApi.md#comfyuigenerateapicomfyuigeneratepost) | **POST** /api/comfyui/generate | Comfyui Generate |
+| Method                                                                                                                    | HTTP request                             | Description            |
+| ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------- |
+| [**comfyuiClearQueueApiComfyuiQueueDelete**](ComfyUIAPIApi.md#comfyuiclearqueueapicomfyuiqueuedelete)                     | **DELETE** /api/comfyui/queue            | Comfyui Clear Queue    |
+| [**comfyuiGenerateApiComfyuiGeneratePost**](ComfyUIAPIApi.md#comfyuigenerateapicomfyuigeneratepost)                       | **POST** /api/comfyui/generate           | Comfyui Generate       |
 | [**comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet**](ComfyUIAPIApi.md#comfyuihistorydetailapicomfyuihistorypromptidget) | **GET** /api/comfyui/history/{prompt_id} | Comfyui History Detail |
-| [**comfyuiHistoryListApiComfyuiHistoryGet**](ComfyUIAPIApi.md#comfyuihistorylistapicomfyuihistoryget) | **GET** /api/comfyui/history | Comfyui History List |
-| [**comfyuiImageApiComfyuiImageFilenameGet**](ComfyUIAPIApi.md#comfyuiimageapicomfyuiimagefilenameget) | **GET** /api/comfyui/image/{filename} | Comfyui Image |
-| [**comfyuiModelsApiComfyuiModelsGet**](ComfyUIAPIApi.md#comfyuimodelsapicomfyuimodelsget) | **GET** /api/comfyui/models | Comfyui Models |
-| [**comfyuiQueueApiComfyuiQueueGet**](ComfyUIAPIApi.md#comfyuiqueueapicomfyuiqueueget) | **GET** /api/comfyui/queue | Comfyui Queue |
-| [**comfyuiStatusApiComfyuiStatusGet**](ComfyUIAPIApi.md#comfyuistatusapicomfyuistatusget) | **GET** /api/comfyui/status | Comfyui Status |
-| [**comfyuiWorkflowApiComfyuiWorkflowPost**](ComfyUIAPIApi.md#comfyuiworkflowapicomfyuiworkflowpost) | **POST** /api/comfyui/workflow | Comfyui Workflow |
-
-
+| [**comfyuiHistoryListApiComfyuiHistoryGet**](ComfyUIAPIApi.md#comfyuihistorylistapicomfyuihistoryget)                     | **GET** /api/comfyui/history             | Comfyui History List   |
+| [**comfyuiImageApiComfyuiImageFilenameGet**](ComfyUIAPIApi.md#comfyuiimageapicomfyuiimagefilenameget)                     | **GET** /api/comfyui/image/{filename}    | Comfyui Image          |
+| [**comfyuiModelsApiComfyuiModelsGet**](ComfyUIAPIApi.md#comfyuimodelsapicomfyuimodelsget)                                 | **GET** /api/comfyui/models              | Comfyui Models         |
+| [**comfyuiQueueApiComfyuiQueueGet**](ComfyUIAPIApi.md#comfyuiqueueapicomfyuiqueueget)                                     | **GET** /api/comfyui/queue               | Comfyui Queue          |
+| [**comfyuiStatusApiComfyuiStatusGet**](ComfyUIAPIApi.md#comfyuistatusapicomfyuistatusget)                                 | **GET** /api/comfyui/status              | Comfyui Status         |
+| [**comfyuiWorkflowApiComfyuiWorkflowPost**](ComfyUIAPIApi.md#comfyuiworkflowapicomfyuiworkflowpost)                       | **POST** /api/comfyui/workflow           | Comfyui Workflow       |
 
 ## comfyuiClearQueueApiComfyuiQueueDelete
 
@@ -27,32 +25,29 @@ Clear the ComfyUI queue.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiClearQueueApiComfyuiQueueDeleteRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiClearQueueApiComfyuiQueueDeleteRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   try {
-    const data = await api.comfyuiClearQueueApiComfyuiQueueDelete();
-    console.log(data);
+    const data = await api.comfyuiClearQueueApiComfyuiQueueDelete()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -72,14 +67,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiGenerateApiComfyuiGeneratePost
 
@@ -87,7 +81,7 @@ This endpoint does not need any parameter.
 
 Comfyui Generate
 
-Generate an image using a simple text-to-image workflow.  This uses the built-in SDXL/Flux compatible workflow template. For custom workflows, use the /workflow endpoint instead.
+Generate an image using a simple text-to-image workflow. This uses the built-in SDXL/Flux compatible workflow template. For custom workflows, use the /workflow endpoint instead.
 
 ### Example
 
@@ -100,7 +94,7 @@ import type { ComfyuiGenerateApiComfyuiGeneratePostRequest } from '@saiden/tenso
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -127,10 +121,9 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **generateRequest** | [GenerateRequest](GenerateRequest.md) |  | |
+| Name                | Type                                  | Description | Notes |
+| ------------------- | ------------------------------------- | ----------- | ----- |
+| **generateRequest** | [GenerateRequest](GenerateRequest.md) |             |       |
 
 ### Return type
 
@@ -145,15 +138,14 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet
 
@@ -166,45 +158,41 @@ Get details for a specific history entry.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   const body = {
     // string
     promptId: promptId_example,
-  } satisfies ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest;
+  } satisfies ComfyuiHistoryDetailApiComfyuiHistoryPromptIdGetRequest
 
   try {
-    const data = await api.comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet(body);
-    console.log(data);
+    const data = await api.comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **promptId** | `string` |  | [Defaults to `undefined`] |
+| Name         | Type     | Description | Notes                     |
+| ------------ | -------- | ----------- | ------------------------- |
+| **promptId** | `string` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -219,15 +207,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiHistoryListApiComfyuiHistoryGet
 
@@ -240,44 +227,40 @@ List ComfyUI generation history.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiHistoryListApiComfyuiHistoryGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiHistoryListApiComfyuiHistoryGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   const body = {
     // number | Max history items (optional)
     limit: 56,
-  } satisfies ComfyuiHistoryListApiComfyuiHistoryGetRequest;
+  } satisfies ComfyuiHistoryListApiComfyuiHistoryGetRequest
 
   try {
-    const data = await api.comfyuiHistoryListApiComfyuiHistoryGet(body);
-    console.log(data);
+    const data = await api.comfyuiHistoryListApiComfyuiHistoryGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
+| Name      | Type     | Description       | Notes                         |
+| --------- | -------- | ----------------- | ----------------------------- |
 | **limit** | `number` | Max history items | [Optional] [Defaults to `20`] |
 
 ### Return type
@@ -293,15 +276,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiImageApiComfyuiImageFilenameGet
 
@@ -309,26 +291,23 @@ example().catch(console.error);
 
 Comfyui Image
 
-Fetch a generated image from ComfyUI.  Use this to retrieve images by filename after generation.
+Fetch a generated image from ComfyUI. Use this to retrieve images by filename after generation.
 
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiImageApiComfyuiImageFilenameGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiImageApiComfyuiImageFilenameGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   const body = {
     // string
@@ -337,28 +316,27 @@ async function example() {
     subfolder: subfolder_example,
     // string | Folder type: output, input, temp (optional)
     folderType: folderType_example,
-  } satisfies ComfyuiImageApiComfyuiImageFilenameGetRequest;
+  } satisfies ComfyuiImageApiComfyuiImageFilenameGetRequest
 
   try {
-    const data = await api.comfyuiImageApiComfyuiImageFilenameGet(body);
-    console.log(data);
+    const data = await api.comfyuiImageApiComfyuiImageFilenameGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **filename** | `string` |  | [Defaults to `undefined`] |
-| **subfolder** | `string` | Subfolder within output directory | [Optional] [Defaults to `&#39;&#39;`] |
-| **folderType** | `string` | Folder type: output, input, temp | [Optional] [Defaults to `&#39;output&#39;`] |
+| Name           | Type     | Description                       | Notes                                       |
+| -------------- | -------- | --------------------------------- | ------------------------------------------- |
+| **filename**   | `string` |                                   | [Defaults to `undefined`]                   |
+| **subfolder**  | `string` | Subfolder within output directory | [Optional] [Defaults to `&#39;&#39;`]       |
+| **folderType** | `string` | Folder type: output, input, temp  | [Optional] [Defaults to `&#39;output&#39;`] |
 
 ### Return type
 
@@ -373,15 +351,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiModelsApiComfyuiModelsGet
 
@@ -394,32 +371,29 @@ List available models in ComfyUI.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiModelsApiComfyuiModelsGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiModelsApiComfyuiModelsGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   try {
-    const data = await api.comfyuiModelsApiComfyuiModelsGet();
-    console.log(data);
+    const data = await api.comfyuiModelsApiComfyuiModelsGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -439,14 +413,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiQueueApiComfyuiQueueGet
 
@@ -459,32 +432,29 @@ Get ComfyUI queue status.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiQueueApiComfyuiQueueGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiQueueApiComfyuiQueueGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   try {
-    const data = await api.comfyuiQueueApiComfyuiQueueGet();
-    console.log(data);
+    const data = await api.comfyuiQueueApiComfyuiQueueGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -504,14 +474,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiStatusApiComfyuiStatusGet
 
@@ -524,32 +493,29 @@ Get ComfyUI system stats (GPU, RAM, etc.).
 ### Example
 
 ```ts
-import {
-  Configuration,
-  ComfyUIAPIApi,
-} from '@saiden/tensors';
-import type { ComfyuiStatusApiComfyuiStatusGetRequest } from '@saiden/tensors';
+import { Configuration, ComfyUIAPIApi } from '@saiden/tensors'
+import type { ComfyuiStatusApiComfyuiStatusGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new ComfyUIAPIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new ComfyUIAPIApi(config)
 
   try {
-    const data = await api.comfyuiStatusApiComfyuiStatusGet();
-    console.log(data);
+    const data = await api.comfyuiStatusApiComfyuiStatusGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -569,14 +535,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## comfyuiWorkflowApiComfyuiWorkflowPost
 
@@ -584,7 +549,7 @@ This endpoint does not need any parameter.
 
 Comfyui Workflow
 
-Queue an arbitrary ComfyUI workflow for execution.  The workflow should be in ComfyUI API format (exported via \&quot;Save (API Format)\&quot;). This endpoint queues the workflow and returns immediately with the prompt_id. Use /history/{prompt_id} to check the result.
+Queue an arbitrary ComfyUI workflow for execution. The workflow should be in ComfyUI API format (exported via \&quot;Save (API Format)\&quot;). This endpoint queues the workflow and returns immediately with the prompt_id. Use /history/{prompt_id} to check the result.
 
 ### Example
 
@@ -597,7 +562,7 @@ import type { ComfyuiWorkflowApiComfyuiWorkflowPostRequest } from '@saiden/tenso
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -624,10 +589,9 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **workflowRequest** | [WorkflowRequest](WorkflowRequest.md) |  | |
+| Name                | Type                                  | Description | Notes |
+| ------------------- | ------------------------------------- | ----------- | ----- |
+| **workflowRequest** | [WorkflowRequest](WorkflowRequest.md) |             |       |
 
 ### Return type
 
@@ -642,12 +606,11 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-

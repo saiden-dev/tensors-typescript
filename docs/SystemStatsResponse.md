@@ -1,14 +1,13 @@
-
 # SystemStatsResponse
 
 System stats response.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`system` | { [key: string]: any; }
-`devices` | Array&lt;{ [key: string]: any; }&gt;
+| Name      | Type                                 |
+| --------- | ------------------------------------ |
+| `system`  | { [key: string]: any; }              |
+| `devices` | Array&lt;{ [key: string]: any; }&gt; |
 
 ## Example
 
@@ -17,8 +16,8 @@ import type { SystemStatsResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "system": null,
-  "devices": null,
+  system: null,
+  devices: null,
 } satisfies SystemStatsResponse
 
 console.log(example)
@@ -33,5 +32,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

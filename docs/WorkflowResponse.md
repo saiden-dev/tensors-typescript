@@ -1,17 +1,16 @@
-
 # WorkflowResponse
 
 Response from workflow execution.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`success` | boolean
-`promptId` | string
-`number` | number
-`error` | string
-`nodeErrors` | { [key: string]: any; }
+| Name         | Type                    |
+| ------------ | ----------------------- |
+| `success`    | boolean                 |
+| `promptId`   | string                  |
+| `number`     | number                  |
+| `error`      | string                  |
+| `nodeErrors` | { [key: string]: any; } |
 
 ## Example
 
@@ -20,11 +19,11 @@ import type { WorkflowResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "success": null,
-  "promptId": null,
-  "number": null,
-  "error": null,
-  "nodeErrors": null,
+  success: null,
+  promptId: null,
+  number: null,
+  error: null,
+  nodeErrors: null,
 } satisfies WorkflowResponse
 
 console.log(example)
@@ -39,5 +38,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

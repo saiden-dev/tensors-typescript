@@ -1,14 +1,13 @@
-
 # QueueStatusResponse
 
 Queue status response.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`queueRunning` | Array&lt;any&gt;
-`queuePending` | Array&lt;any&gt;
+| Name           | Type             |
+| -------------- | ---------------- |
+| `queueRunning` | Array&lt;any&gt; |
+| `queuePending` | Array&lt;any&gt; |
 
 ## Example
 
@@ -17,8 +16,8 @@ import type { QueueStatusResponse } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "queueRunning": null,
-  "queuePending": null,
+  queueRunning: null,
+  queuePending: null,
 } satisfies QueueStatusResponse
 
 console.log(example)
@@ -33,5 +32,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

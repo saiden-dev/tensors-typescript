@@ -1,11 +1,9 @@
-
 # LocationInner
-
 
 ## Properties
 
-Name | Type
------------- | -------------
+| Name | Type |
+| ---- | ---- |
 
 ## Example
 
@@ -13,8 +11,7 @@ Name | Type
 import type { LocationInner } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
-const example = {
-} satisfies LocationInner
+const example = {} satisfies LocationInner
 
 console.log(example)
 
@@ -28,5 +25,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

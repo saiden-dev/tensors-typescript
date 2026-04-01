@@ -1,17 +1,15 @@
 # GalleryApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**deleteImageApiImagesImageIdDelete**](GalleryApi.md#deleteimageapiimagesimageiddelete) | **DELETE** /api/images/{image_id} | Delete Image |
+| Method                                                                                                   | HTTP request                         | Description         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| [**deleteImageApiImagesImageIdDelete**](GalleryApi.md#deleteimageapiimagesimageiddelete)                 | **DELETE** /api/images/{image_id}    | Delete Image        |
 | [**editImageMetadataApiImagesImageIdEditPost**](GalleryApi.md#editimagemetadataapiimagesimageideditpost) | **POST** /api/images/{image_id}/edit | Edit Image Metadata |
-| [**galleryStatsApiImagesStatsSummaryGet**](GalleryApi.md#gallerystatsapiimagesstatssummaryget) | **GET** /api/images/stats/summary | Gallery Stats |
-| [**getImageApiImagesImageIdGet**](GalleryApi.md#getimageapiimagesimageidget) | **GET** /api/images/{image_id} | Get Image |
-| [**getImageMetadataApiImagesImageIdMetaGet**](GalleryApi.md#getimagemetadataapiimagesimageidmetaget) | **GET** /api/images/{image_id}/meta | Get Image Metadata |
-| [**listImagesApiImagesGet**](GalleryApi.md#listimagesapiimagesget) | **GET** /api/images | List Images |
-
-
+| [**galleryStatsApiImagesStatsSummaryGet**](GalleryApi.md#gallerystatsapiimagesstatssummaryget)           | **GET** /api/images/stats/summary    | Gallery Stats       |
+| [**getImageApiImagesImageIdGet**](GalleryApi.md#getimageapiimagesimageidget)                             | **GET** /api/images/{image_id}       | Get Image           |
+| [**getImageMetadataApiImagesImageIdMetaGet**](GalleryApi.md#getimagemetadataapiimagesimageidmetaget)     | **GET** /api/images/{image_id}/meta  | Get Image Metadata  |
+| [**listImagesApiImagesGet**](GalleryApi.md#listimagesapiimagesget)                                       | **GET** /api/images                  | List Images         |
 
 ## deleteImageApiImagesImageIdDelete
 
@@ -24,45 +22,41 @@ Delete an image and its metadata.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  GalleryApi,
-} from '@saiden/tensors';
-import type { DeleteImageApiImagesImageIdDeleteRequest } from '@saiden/tensors';
+import { Configuration, GalleryApi } from '@saiden/tensors'
+import type { DeleteImageApiImagesImageIdDeleteRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new GalleryApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new GalleryApi(config)
 
   const body = {
     // string
     imageId: imageId_example,
-  } satisfies DeleteImageApiImagesImageIdDeleteRequest;
+  } satisfies DeleteImageApiImagesImageIdDeleteRequest
 
   try {
-    const data = await api.deleteImageApiImagesImageIdDelete(body);
-    console.log(data);
+    const data = await api.deleteImageApiImagesImageIdDelete(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **imageId** | `string` |  | [Defaults to `undefined`] |
+| Name        | Type     | Description | Notes                     |
+| ----------- | -------- | ----------- | ------------------------- |
+| **imageId** | `string` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -77,15 +71,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## editImageMetadataApiImagesImageIdEditPost
 
@@ -106,7 +99,7 @@ import type { EditImageMetadataApiImagesImageIdEditPostRequest } from '@saiden/t
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -135,11 +128,10 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **imageId** | `string` |  | [Defaults to `undefined`] |
-| **metadataUpdate** | [MetadataUpdate](MetadataUpdate.md) |  | |
+| Name               | Type                                | Description | Notes                     |
+| ------------------ | ----------------------------------- | ----------- | ------------------------- |
+| **imageId**        | `string`                            |             | [Defaults to `undefined`] |
+| **metadataUpdate** | [MetadataUpdate](MetadataUpdate.md) |             |                           |
 
 ### Return type
 
@@ -154,15 +146,14 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## galleryStatsApiImagesStatsSummaryGet
 
@@ -175,32 +166,29 @@ Get gallery statistics.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  GalleryApi,
-} from '@saiden/tensors';
-import type { GalleryStatsApiImagesStatsSummaryGetRequest } from '@saiden/tensors';
+import { Configuration, GalleryApi } from '@saiden/tensors'
+import type { GalleryStatsApiImagesStatsSummaryGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new GalleryApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new GalleryApi(config)
 
   try {
-    const data = await api.galleryStatsApiImagesStatsSummaryGet();
-    console.log(data);
+    const data = await api.galleryStatsApiImagesStatsSummaryGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -220,14 +208,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getImageApiImagesImageIdGet
 
@@ -240,45 +227,41 @@ Get an image file by ID.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  GalleryApi,
-} from '@saiden/tensors';
-import type { GetImageApiImagesImageIdGetRequest } from '@saiden/tensors';
+import { Configuration, GalleryApi } from '@saiden/tensors'
+import type { GetImageApiImagesImageIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new GalleryApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new GalleryApi(config)
 
   const body = {
     // string
     imageId: imageId_example,
-  } satisfies GetImageApiImagesImageIdGetRequest;
+  } satisfies GetImageApiImagesImageIdGetRequest
 
   try {
-    const data = await api.getImageApiImagesImageIdGet(body);
-    console.log(data);
+    const data = await api.getImageApiImagesImageIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **imageId** | `string` |  | [Defaults to `undefined`] |
+| Name        | Type     | Description | Notes                     |
+| ----------- | -------- | ----------- | ------------------------- |
+| **imageId** | `string` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -293,15 +276,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getImageMetadataApiImagesImageIdMetaGet
 
@@ -314,45 +296,41 @@ Get metadata for an image.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  GalleryApi,
-} from '@saiden/tensors';
-import type { GetImageMetadataApiImagesImageIdMetaGetRequest } from '@saiden/tensors';
+import { Configuration, GalleryApi } from '@saiden/tensors'
+import type { GetImageMetadataApiImagesImageIdMetaGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new GalleryApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new GalleryApi(config)
 
   const body = {
     // string
     imageId: imageId_example,
-  } satisfies GetImageMetadataApiImagesImageIdMetaGetRequest;
+  } satisfies GetImageMetadataApiImagesImageIdMetaGetRequest
 
   try {
-    const data = await api.getImageMetadataApiImagesImageIdMetaGet(body);
-    console.log(data);
+    const data = await api.getImageMetadataApiImagesImageIdMetaGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **imageId** | `string` |  | [Defaults to `undefined`] |
+| Name        | Type     | Description | Notes                     |
+| ----------- | -------- | ----------- | ------------------------- |
+| **imageId** | `string` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -367,15 +345,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## listImagesApiImagesGet
 
@@ -388,21 +365,18 @@ List images in the gallery, paginated.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  GalleryApi,
-} from '@saiden/tensors';
-import type { ListImagesApiImagesGetRequest } from '@saiden/tensors';
+import { Configuration, GalleryApi } from '@saiden/tensors'
+import type { ListImagesApiImagesGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new GalleryApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new GalleryApi(config)
 
   const body = {
     // number | Max images to return (optional)
@@ -411,28 +385,27 @@ async function example() {
     offset: 56,
     // boolean | Sort newest first (optional)
     newestFirst: true,
-  } satisfies ListImagesApiImagesGetRequest;
+  } satisfies ListImagesApiImagesGetRequest
 
   try {
-    const data = await api.listImagesApiImagesGet(body);
-    console.log(data);
+    const data = await api.listImagesApiImagesGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **limit** | `number` | Max images to return | [Optional] [Defaults to `50`] |
-| **offset** | `number` | Offset for pagination | [Optional] [Defaults to `0`] |
-| **newestFirst** | `boolean` | Sort newest first | [Optional] [Defaults to `true`] |
+| Name            | Type      | Description           | Notes                           |
+| --------------- | --------- | --------------------- | ------------------------------- |
+| **limit**       | `number`  | Max images to return  | [Optional] [Defaults to `50`]   |
+| **offset**      | `number`  | Offset for pagination | [Optional] [Defaults to `0`]    |
+| **newestFirst** | `boolean` | Sort newest first     | [Optional] [Defaults to `true`] |
 
 ### Return type
 
@@ -447,12 +420,11 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-

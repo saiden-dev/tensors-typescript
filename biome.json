@@ -44,9 +44,6 @@
     }
   },
   "files": {
-    "includes": [
-      "src/**/*.ts",
-      "*.ts"
-    ]
+    "includes": ["src/**/*.ts", "*.ts"]
   }
 }

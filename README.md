@@ -12,77 +12,71 @@ npm install @saiden/tensors --save
 
 Next, try it out.
 
-
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { AuthSuccessAuthSuccessGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { AuthSuccessAuthSuccessGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   try {
-    const data = await api.authSuccessAuthSuccessGet();
-    console.log(data);
+    const data = await api.authSuccessAuthSuccessGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
-
 
 ## Documentation
 
 ### API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Class | Method | HTTP request | Description
-| ----- | ------ | ------------ | -------------
-*AuthApi* | [**authSuccessAuthSuccessGet**](docs/AuthApi.md#authsuccessauthsuccessget) | **GET** /auth/success | Auth Success
-*AuthApi* | [**githubAuthAuthGithubGet**](docs/AuthApi.md#githubauthauthgithubget) | **GET** /auth/github | Github Auth
-*AuthApi* | [**githubCallbackAuthCallbackGet**](docs/AuthApi.md#githubcallbackauthcallbackget) | **GET** /auth/callback | Github Callback
-*AuthApi* | [**loginPageAuthLoginGet**](docs/AuthApi.md#loginpageauthloginget) | **GET** /auth/login | Login Page
-*AuthApi* | [**logoutAuthLogoutGet**](docs/AuthApi.md#logoutauthlogoutget) | **GET** /auth/logout | Logout
-*AuthApi* | [**verifyTokenAuthVerifyGet**](docs/AuthApi.md#verifytokenauthverifyget) | **GET** /auth/verify | Verify Token
-*CivitAIApi* | [**getModelApiCivitaiModelModelIdGet**](docs/CivitAIApi.md#getmodelapicivitaimodelmodelidget) | **GET** /api/civitai/model/{model_id} | Get Model
-*ComfyUIAPIApi* | [**comfyuiClearQueueApiComfyuiQueueDelete**](docs/ComfyUIAPIApi.md#comfyuiclearqueueapicomfyuiqueuedelete) | **DELETE** /api/comfyui/queue | Comfyui Clear Queue
-*ComfyUIAPIApi* | [**comfyuiGenerateApiComfyuiGeneratePost**](docs/ComfyUIAPIApi.md#comfyuigenerateapicomfyuigeneratepost) | **POST** /api/comfyui/generate | Comfyui Generate
-*ComfyUIAPIApi* | [**comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet**](docs/ComfyUIAPIApi.md#comfyuihistorydetailapicomfyuihistorypromptidget) | **GET** /api/comfyui/history/{prompt_id} | Comfyui History Detail
-*ComfyUIAPIApi* | [**comfyuiHistoryListApiComfyuiHistoryGet**](docs/ComfyUIAPIApi.md#comfyuihistorylistapicomfyuihistoryget) | **GET** /api/comfyui/history | Comfyui History List
-*ComfyUIAPIApi* | [**comfyuiImageApiComfyuiImageFilenameGet**](docs/ComfyUIAPIApi.md#comfyuiimageapicomfyuiimagefilenameget) | **GET** /api/comfyui/image/{filename} | Comfyui Image
-*ComfyUIAPIApi* | [**comfyuiModelsApiComfyuiModelsGet**](docs/ComfyUIAPIApi.md#comfyuimodelsapicomfyuimodelsget) | **GET** /api/comfyui/models | Comfyui Models
-*ComfyUIAPIApi* | [**comfyuiQueueApiComfyuiQueueGet**](docs/ComfyUIAPIApi.md#comfyuiqueueapicomfyuiqueueget) | **GET** /api/comfyui/queue | Comfyui Queue
-*ComfyUIAPIApi* | [**comfyuiStatusApiComfyuiStatusGet**](docs/ComfyUIAPIApi.md#comfyuistatusapicomfyuistatusget) | **GET** /api/comfyui/status | Comfyui Status
-*ComfyUIAPIApi* | [**comfyuiWorkflowApiComfyuiWorkflowPost**](docs/ComfyUIAPIApi.md#comfyuiworkflowapicomfyuiworkflowpost) | **POST** /api/comfyui/workflow | Comfyui Workflow
-*DatabaseApi* | [**cacheModelApiDbCachePost**](docs/DatabaseApi.md#cachemodelapidbcachepost) | **POST** /api/db/cache | Cache Model
-*DatabaseApi* | [**getFileApiDbFilesFileIdGet**](docs/DatabaseApi.md#getfileapidbfilesfileidget) | **GET** /api/db/files/{file_id} | Get File
-*DatabaseApi* | [**getModelApiDbModelsCivitaiIdGet**](docs/DatabaseApi.md#getmodelapidbmodelscivitaiidget) | **GET** /api/db/models/{civitai_id} | Get Model
-*DatabaseApi* | [**getStatsApiDbStatsGet**](docs/DatabaseApi.md#getstatsapidbstatsget) | **GET** /api/db/stats | Get Stats
-*DatabaseApi* | [**getTriggersByPathApiDbTriggersGet**](docs/DatabaseApi.md#gettriggersbypathapidbtriggersget) | **GET** /api/db/triggers | Get Triggers By Path
-*DatabaseApi* | [**getTriggersByVersionApiDbTriggersVersionIdGet**](docs/DatabaseApi.md#gettriggersbyversionapidbtriggersversionidget) | **GET** /api/db/triggers/{version_id} | Get Triggers By Version
-*DatabaseApi* | [**linkFilesApiDbLinkPost**](docs/DatabaseApi.md#linkfilesapidblinkpost) | **POST** /api/db/link | Link Files
-*DatabaseApi* | [**listFilesApiDbFilesGet**](docs/DatabaseApi.md#listfilesapidbfilesget) | **GET** /api/db/files | List Files
-*DatabaseApi* | [**scanDirectoryApiDbScanPost**](docs/DatabaseApi.md#scandirectoryapidbscanpost) | **POST** /api/db/scan | Scan Directory
-*DatabaseApi* | [**searchModelsApiDbModelsGet**](docs/DatabaseApi.md#searchmodelsapidbmodelsget) | **GET** /api/db/models | Search Models
-*DefaultApi* | [**statusStatusGet**](docs/DefaultApi.md#statusstatusget) | **GET** /status | Status
-*DownloadApi* | [**getDownloadStatusApiDownloadStatusDownloadIdGet**](docs/DownloadApi.md#getdownloadstatusapidownloadstatusdownloadidget) | **GET** /api/download/status/{download_id} | Get Download Status
-*DownloadApi* | [**listActiveDownloadsApiDownloadActiveGet**](docs/DownloadApi.md#listactivedownloadsapidownloadactiveget) | **GET** /api/download/active | List Active Downloads
-*DownloadApi* | [**startDownloadApiDownloadPost**](docs/DownloadApi.md#startdownloadapidownloadpost) | **POST** /api/download | Start Download
-*GalleryApi* | [**deleteImageApiImagesImageIdDelete**](docs/GalleryApi.md#deleteimageapiimagesimageiddelete) | **DELETE** /api/images/{image_id} | Delete Image
-*GalleryApi* | [**editImageMetadataApiImagesImageIdEditPost**](docs/GalleryApi.md#editimagemetadataapiimagesimageideditpost) | **POST** /api/images/{image_id}/edit | Edit Image Metadata
-*GalleryApi* | [**galleryStatsApiImagesStatsSummaryGet**](docs/GalleryApi.md#gallerystatsapiimagesstatssummaryget) | **GET** /api/images/stats/summary | Gallery Stats
-*GalleryApi* | [**getImageApiImagesImageIdGet**](docs/GalleryApi.md#getimageapiimagesimageidget) | **GET** /api/images/{image_id} | Get Image
-*GalleryApi* | [**getImageMetadataApiImagesImageIdMetaGet**](docs/GalleryApi.md#getimagemetadataapiimagesimageidmetaget) | **GET** /api/images/{image_id}/meta | Get Image Metadata
-*GalleryApi* | [**listImagesApiImagesGet**](docs/GalleryApi.md#listimagesapiimagesget) | **GET** /api/images | List Images
-*SearchApi* | [**searchModelsApiSearchGet**](docs/SearchApi.md#searchmodelsapisearchget) | **GET** /api/search | Search Models
-
+| Class           | Method                                                                                                                         | HTTP request                               | Description             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ | ----------------------- |
+| _AuthApi_       | [**authSuccessAuthSuccessGet**](docs/AuthApi.md#authsuccessauthsuccessget)                                                     | **GET** /auth/success                      | Auth Success            |
+| _AuthApi_       | [**githubAuthAuthGithubGet**](docs/AuthApi.md#githubauthauthgithubget)                                                         | **GET** /auth/github                       | Github Auth             |
+| _AuthApi_       | [**githubCallbackAuthCallbackGet**](docs/AuthApi.md#githubcallbackauthcallbackget)                                             | **GET** /auth/callback                     | Github Callback         |
+| _AuthApi_       | [**loginPageAuthLoginGet**](docs/AuthApi.md#loginpageauthloginget)                                                             | **GET** /auth/login                        | Login Page              |
+| _AuthApi_       | [**logoutAuthLogoutGet**](docs/AuthApi.md#logoutauthlogoutget)                                                                 | **GET** /auth/logout                       | Logout                  |
+| _AuthApi_       | [**verifyTokenAuthVerifyGet**](docs/AuthApi.md#verifytokenauthverifyget)                                                       | **GET** /auth/verify                       | Verify Token            |
+| _CivitAIApi_    | [**getModelApiCivitaiModelModelIdGet**](docs/CivitAIApi.md#getmodelapicivitaimodelmodelidget)                                  | **GET** /api/civitai/model/{model_id}      | Get Model               |
+| _ComfyUIAPIApi_ | [**comfyuiClearQueueApiComfyuiQueueDelete**](docs/ComfyUIAPIApi.md#comfyuiclearqueueapicomfyuiqueuedelete)                     | **DELETE** /api/comfyui/queue              | Comfyui Clear Queue     |
+| _ComfyUIAPIApi_ | [**comfyuiGenerateApiComfyuiGeneratePost**](docs/ComfyUIAPIApi.md#comfyuigenerateapicomfyuigeneratepost)                       | **POST** /api/comfyui/generate             | Comfyui Generate        |
+| _ComfyUIAPIApi_ | [**comfyuiHistoryDetailApiComfyuiHistoryPromptIdGet**](docs/ComfyUIAPIApi.md#comfyuihistorydetailapicomfyuihistorypromptidget) | **GET** /api/comfyui/history/{prompt_id}   | Comfyui History Detail  |
+| _ComfyUIAPIApi_ | [**comfyuiHistoryListApiComfyuiHistoryGet**](docs/ComfyUIAPIApi.md#comfyuihistorylistapicomfyuihistoryget)                     | **GET** /api/comfyui/history               | Comfyui History List    |
+| _ComfyUIAPIApi_ | [**comfyuiImageApiComfyuiImageFilenameGet**](docs/ComfyUIAPIApi.md#comfyuiimageapicomfyuiimagefilenameget)                     | **GET** /api/comfyui/image/{filename}      | Comfyui Image           |
+| _ComfyUIAPIApi_ | [**comfyuiModelsApiComfyuiModelsGet**](docs/ComfyUIAPIApi.md#comfyuimodelsapicomfyuimodelsget)                                 | **GET** /api/comfyui/models                | Comfyui Models          |
+| _ComfyUIAPIApi_ | [**comfyuiQueueApiComfyuiQueueGet**](docs/ComfyUIAPIApi.md#comfyuiqueueapicomfyuiqueueget)                                     | **GET** /api/comfyui/queue                 | Comfyui Queue           |
+| _ComfyUIAPIApi_ | [**comfyuiStatusApiComfyuiStatusGet**](docs/ComfyUIAPIApi.md#comfyuistatusapicomfyuistatusget)                                 | **GET** /api/comfyui/status                | Comfyui Status          |
+| _ComfyUIAPIApi_ | [**comfyuiWorkflowApiComfyuiWorkflowPost**](docs/ComfyUIAPIApi.md#comfyuiworkflowapicomfyuiworkflowpost)                       | **POST** /api/comfyui/workflow             | Comfyui Workflow        |
+| _DatabaseApi_   | [**cacheModelApiDbCachePost**](docs/DatabaseApi.md#cachemodelapidbcachepost)                                                   | **POST** /api/db/cache                     | Cache Model             |
+| _DatabaseApi_   | [**getFileApiDbFilesFileIdGet**](docs/DatabaseApi.md#getfileapidbfilesfileidget)                                               | **GET** /api/db/files/{file_id}            | Get File                |
+| _DatabaseApi_   | [**getModelApiDbModelsCivitaiIdGet**](docs/DatabaseApi.md#getmodelapidbmodelscivitaiidget)                                     | **GET** /api/db/models/{civitai_id}        | Get Model               |
+| _DatabaseApi_   | [**getStatsApiDbStatsGet**](docs/DatabaseApi.md#getstatsapidbstatsget)                                                         | **GET** /api/db/stats                      | Get Stats               |
+| _DatabaseApi_   | [**getTriggersByPathApiDbTriggersGet**](docs/DatabaseApi.md#gettriggersbypathapidbtriggersget)                                 | **GET** /api/db/triggers                   | Get Triggers By Path    |
+| _DatabaseApi_   | [**getTriggersByVersionApiDbTriggersVersionIdGet**](docs/DatabaseApi.md#gettriggersbyversionapidbtriggersversionidget)         | **GET** /api/db/triggers/{version_id}      | Get Triggers By Version |
+| _DatabaseApi_   | [**linkFilesApiDbLinkPost**](docs/DatabaseApi.md#linkfilesapidblinkpost)                                                       | **POST** /api/db/link                      | Link Files              |
+| _DatabaseApi_   | [**listFilesApiDbFilesGet**](docs/DatabaseApi.md#listfilesapidbfilesget)                                                       | **GET** /api/db/files                      | List Files              |
+| _DatabaseApi_   | [**scanDirectoryApiDbScanPost**](docs/DatabaseApi.md#scandirectoryapidbscanpost)                                               | **POST** /api/db/scan                      | Scan Directory          |
+| _DatabaseApi_   | [**searchModelsApiDbModelsGet**](docs/DatabaseApi.md#searchmodelsapidbmodelsget)                                               | **GET** /api/db/models                     | Search Models           |
+| _DefaultApi_    | [**statusStatusGet**](docs/DefaultApi.md#statusstatusget)                                                                      | **GET** /status                            | Status                  |
+| _DownloadApi_   | [**getDownloadStatusApiDownloadStatusDownloadIdGet**](docs/DownloadApi.md#getdownloadstatusapidownloadstatusdownloadidget)     | **GET** /api/download/status/{download_id} | Get Download Status     |
+| _DownloadApi_   | [**listActiveDownloadsApiDownloadActiveGet**](docs/DownloadApi.md#listactivedownloadsapidownloadactiveget)                     | **GET** /api/download/active               | List Active Downloads   |
+| _DownloadApi_   | [**startDownloadApiDownloadPost**](docs/DownloadApi.md#startdownloadapidownloadpost)                                           | **POST** /api/download                     | Start Download          |
+| _GalleryApi_    | [**deleteImageApiImagesImageIdDelete**](docs/GalleryApi.md#deleteimageapiimagesimageiddelete)                                  | **DELETE** /api/images/{image_id}          | Delete Image            |
+| _GalleryApi_    | [**editImageMetadataApiImagesImageIdEditPost**](docs/GalleryApi.md#editimagemetadataapiimagesimageideditpost)                  | **POST** /api/images/{image_id}/edit       | Edit Image Metadata     |
+| _GalleryApi_    | [**galleryStatsApiImagesStatsSummaryGet**](docs/GalleryApi.md#gallerystatsapiimagesstatssummaryget)                            | **GET** /api/images/stats/summary          | Gallery Stats           |
+| _GalleryApi_    | [**getImageApiImagesImageIdGet**](docs/GalleryApi.md#getimageapiimagesimageidget)                                              | **GET** /api/images/{image_id}             | Get Image               |
+| _GalleryApi_    | [**getImageMetadataApiImagesImageIdMetaGet**](docs/GalleryApi.md#getimagemetadataapiimagesimageidmetaget)                      | **GET** /api/images/{image_id}/meta        | Get Image Metadata      |
+| _GalleryApi_    | [**listImagesApiImagesGet**](docs/GalleryApi.md#listimagesapiimagesget)                                                        | **GET** /api/images                        | List Images             |
+| _SearchApi_     | [**searchModelsApiSearchGet**](docs/SearchApi.md#searchmodelsapisearchget)                                                     | **GET** /api/search                        | Search Models           |
 
 ### Models
 
@@ -105,18 +99,17 @@ All URIs are relative to *http://localhost*
 
 ### Authorization
 
-
 Authentication schemes defined for the API:
 <a id="APIKeyHeader"></a>
-#### APIKeyHeader
 
+#### APIKeyHeader
 
 - **Type**: API key
 - **API key parameter name**: `X-API-Key`
 - **Location**: HTTP header
-<a id="APIKeyQuery"></a>
-#### APIKeyQuery
+  <a id="APIKeyQuery"></a>
 
+#### APIKeyQuery
 
 - **Type**: API key
 - **API key parameter name**: `api_key`
@@ -136,16 +129,15 @@ and is automatically generated by the
 The generated npm module supports the following:
 
 - Environments
-  * Node.js
-  * Webpack
-  * Browserify
+  - Node.js
+  - Webpack
+  - Browserify
 - Language levels
-  * ES5 - you must have a Promises/A+ library installed
-  * ES6
+  - ES5 - you must have a Promises/A+ library installed
+  - ES6
 - Module systems
-  * CommonJS
-  * ES6 module system
-
+  - CommonJS
+  - ES6 module system
 
 ## Development
 
@@ -166,7 +158,6 @@ Once you've built the package, you can publish it to npm:
 ```bash
 npm publish
 ```
-
 
 ## AI Agent Disclaimer
 

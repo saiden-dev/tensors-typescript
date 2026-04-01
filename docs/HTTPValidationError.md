@@ -1,12 +1,10 @@
-
 # HTTPValidationError
-
 
 ## Properties
 
-Name | Type
------------- | -------------
-`detail` | [Array&lt;ValidationError&gt;](ValidationError.md)
+| Name     | Type                                               |
+| -------- | -------------------------------------------------- |
+| `detail` | [Array&lt;ValidationError&gt;](ValidationError.md) |
 
 ## Example
 
@@ -15,7 +13,7 @@ import type { HTTPValidationError } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "detail": null,
+  detail: null,
 } satisfies HTTPValidationError
 
 console.log(example)
@@ -30,5 +28,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

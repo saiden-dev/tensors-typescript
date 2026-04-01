@@ -1,16 +1,14 @@
-
 # ValidationError
-
 
 ## Properties
 
-Name | Type
------------- | -------------
-`loc` | [Array&lt;LocationInner&gt;](LocationInner.md)
-`msg` | string
-`type` | string
-`input` | any
-`ctx` | object
+| Name    | Type                                           |
+| ------- | ---------------------------------------------- |
+| `loc`   | [Array&lt;LocationInner&gt;](LocationInner.md) |
+| `msg`   | string                                         |
+| `type`  | string                                         |
+| `input` | any                                            |
+| `ctx`   | object                                         |
 
 ## Example
 
@@ -19,11 +17,11 @@ import type { ValidationError } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "loc": null,
-  "msg": null,
-  "type": null,
-  "input": null,
-  "ctx": null,
+  loc: null,
+  msg: null,
+  type: null,
+  input: null,
+  ctx: null,
 } satisfies ValidationError
 
 console.log(example)
@@ -38,5 +36,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

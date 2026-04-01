@@ -1,13 +1,12 @@
-
 # WorkflowRequest
 
 Request body for running arbitrary workflow.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`workflow` | { [key: string]: any; }
+| Name       | Type                    |
+| ---------- | ----------------------- |
+| `workflow` | { [key: string]: any; } |
 
 ## Example
 
@@ -16,7 +15,7 @@ import type { WorkflowRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "workflow": null,
+  workflow: null,
 } satisfies WorkflowRequest
 
 console.log(example)
@@ -31,5 +30,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

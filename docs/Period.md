@@ -1,12 +1,11 @@
-
 # Period
 
 Time period filter options.
 
 ## Properties
 
-Name | Type
------------- | -------------
+| Name | Type |
+| ---- | ---- |
 
 ## Example
 
@@ -14,8 +13,7 @@ Name | Type
 import type { Period } from 'tensors-client'
 
 // TODO: Update the object below with actual values
-const example = {
-} satisfies Period
+const example = {} satisfies Period
 
 console.log(example)
 
@@ -29,5 +27,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

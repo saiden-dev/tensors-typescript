@@ -1,12 +1,11 @@
-
 # Provider
 
 Search provider options.
 
 ## Properties
 
-Name | Type
------------- | -------------
+| Name | Type |
+| ---- | ---- |
 
 ## Example
 
@@ -14,8 +13,7 @@ Name | Type
 import type { Provider } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
-const example = {
-} satisfies Provider
+const example = {} satisfies Provider
 
 console.log(example)
 
@@ -29,5 +27,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

@@ -1,25 +1,24 @@
-
 # GenerateRequest
 
 Request body for text-to-image generation.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`prompt` | string
-`negativePrompt` | string
-`model` | string
-`width` | number
-`height` | number
-`steps` | number
-`cfg` | number
-`seed` | number
-`sampler` | string
-`scheduler` | string
-`vae` | string
-`loraName` | string
-`loraStrength` | number
+| Name             | Type   |
+| ---------------- | ------ |
+| `prompt`         | string |
+| `negativePrompt` | string |
+| `model`          | string |
+| `width`          | number |
+| `height`         | number |
+| `steps`          | number |
+| `cfg`            | number |
+| `seed`           | number |
+| `sampler`        | string |
+| `scheduler`      | string |
+| `vae`            | string |
+| `loraName`       | string |
+| `loraStrength`   | number |
 
 ## Example
 
@@ -28,19 +27,19 @@ import type { GenerateRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "prompt": null,
-  "negativePrompt": null,
-  "model": null,
-  "width": null,
-  "height": null,
-  "steps": null,
-  "cfg": null,
-  "seed": null,
-  "sampler": null,
-  "scheduler": null,
-  "vae": null,
-  "loraName": null,
-  "loraStrength": null,
+  prompt: null,
+  negativePrompt: null,
+  model: null,
+  width: null,
+  height: null,
+  steps: null,
+  cfg: null,
+  seed: null,
+  sampler: null,
+  scheduler: null,
+  vae: null,
+  loraName: null,
+  loraStrength: null,
 } satisfies GenerateRequest
 
 console.log(example)
@@ -55,5 +54,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

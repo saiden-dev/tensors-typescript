@@ -1,16 +1,15 @@
-
 # DownloadRequest
 
 Request body for downloading a model.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`versionId` | number
-`modelId` | number
-`hash` | string
-`outputDir` | string
+| Name        | Type   |
+| ----------- | ------ |
+| `versionId` | number |
+| `modelId`   | number |
+| `hash`      | string |
+| `outputDir` | string |
 
 ## Example
 
@@ -19,10 +18,10 @@ import type { DownloadRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "versionId": null,
-  "modelId": null,
-  "hash": null,
-  "outputDir": null,
+  versionId: null,
+  modelId: null,
+  hash: null,
+  outputDir: null,
 } satisfies DownloadRequest
 
 console.log(example)
@@ -37,5 +36,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

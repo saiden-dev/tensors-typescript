@@ -1,17 +1,15 @@
 # AuthApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**authSuccessAuthSuccessGet**](AuthApi.md#authsuccessauthsuccessget) | **GET** /auth/success | Auth Success |
-| [**githubAuthAuthGithubGet**](AuthApi.md#githubauthauthgithubget) | **GET** /auth/github | Github Auth |
+| Method                                                                        | HTTP request           | Description     |
+| ----------------------------------------------------------------------------- | ---------------------- | --------------- |
+| [**authSuccessAuthSuccessGet**](AuthApi.md#authsuccessauthsuccessget)         | **GET** /auth/success  | Auth Success    |
+| [**githubAuthAuthGithubGet**](AuthApi.md#githubauthauthgithubget)             | **GET** /auth/github   | Github Auth     |
 | [**githubCallbackAuthCallbackGet**](AuthApi.md#githubcallbackauthcallbackget) | **GET** /auth/callback | Github Callback |
-| [**loginPageAuthLoginGet**](AuthApi.md#loginpageauthloginget) | **GET** /auth/login | Login Page |
-| [**logoutAuthLogoutGet**](AuthApi.md#logoutauthlogoutget) | **GET** /auth/logout | Logout |
-| [**verifyTokenAuthVerifyGet**](AuthApi.md#verifytokenauthverifyget) | **GET** /auth/verify | Verify Token |
-
-
+| [**loginPageAuthLoginGet**](AuthApi.md#loginpageauthloginget)                 | **GET** /auth/login    | Login Page      |
+| [**logoutAuthLogoutGet**](AuthApi.md#logoutauthlogoutget)                     | **GET** /auth/logout   | Logout          |
+| [**verifyTokenAuthVerifyGet**](AuthApi.md#verifytokenauthverifyget)           | **GET** /auth/verify   | Verify Token    |
 
 ## authSuccessAuthSuccessGet
 
@@ -24,26 +22,23 @@ Show success page after login.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { AuthSuccessAuthSuccessGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { AuthSuccessAuthSuccessGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   try {
-    const data = await api.authSuccessAuthSuccessGet();
-    console.log(data);
+    const data = await api.authSuccessAuthSuccessGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -63,14 +58,13 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## githubAuthAuthGithubGet
 
@@ -83,38 +77,34 @@ Redirect to GitHub OAuth.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { GithubAuthAuthGithubGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { GithubAuthAuthGithubGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   const body = {
     // string | URL to redirect after login (optional)
     returnUrl: returnUrl_example,
-  } satisfies GithubAuthAuthGithubGetRequest;
+  } satisfies GithubAuthAuthGithubGetRequest
 
   try {
-    const data = await api.githubAuthAuthGithubGet(body);
-    console.log(data);
+    const data = await api.githubAuthAuthGithubGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
+| Name          | Type     | Description                 | Notes                                |
+| ------------- | -------- | --------------------------- | ------------------------------------ |
 | **returnUrl** | `string` | URL to redirect after login | [Optional] [Defaults to `undefined`] |
 
 ### Return type
@@ -130,15 +120,14 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## githubCallbackAuthCallbackGet
 
@@ -151,42 +140,38 @@ Handle GitHub OAuth callback.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { GithubCallbackAuthCallbackGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { GithubCallbackAuthCallbackGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   const body = {
     // string (optional)
     code: code_example,
     // string (optional)
     state: state_example,
-  } satisfies GithubCallbackAuthCallbackGetRequest;
+  } satisfies GithubCallbackAuthCallbackGetRequest
 
   try {
-    const data = await api.githubCallbackAuthCallbackGet(body);
-    console.log(data);
+    const data = await api.githubCallbackAuthCallbackGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **code** | `string` |  | [Optional] [Defaults to `undefined`] |
-| **state** | `string` |  | [Optional] [Defaults to `undefined`] |
+| Name      | Type     | Description | Notes                                |
+| --------- | -------- | ----------- | ------------------------------------ |
+| **code**  | `string` |             | [Optional] [Defaults to `undefined`] |
+| **state** | `string` |             | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -201,15 +186,14 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## loginPageAuthLoginGet
 
@@ -222,42 +206,38 @@ Show login page.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { LoginPageAuthLoginGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { LoginPageAuthLoginGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   const body = {
     // string | URL to redirect after login (optional)
     returnUrl: returnUrl_example,
     // string (optional)
     error: error_example,
-  } satisfies LoginPageAuthLoginGetRequest;
+  } satisfies LoginPageAuthLoginGetRequest
 
   try {
-    const data = await api.loginPageAuthLoginGet(body);
-    console.log(data);
+    const data = await api.loginPageAuthLoginGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
+| Name          | Type     | Description                 | Notes                                |
+| ------------- | -------- | --------------------------- | ------------------------------------ |
 | **returnUrl** | `string` | URL to redirect after login | [Optional] [Defaults to `undefined`] |
-| **error** | `string` |  | [Optional] [Defaults to `undefined`] |
+| **error**     | `string` |                             | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -272,15 +252,14 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## logoutAuthLogoutGet
 
@@ -293,39 +272,35 @@ Clear session and redirect.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { LogoutAuthLogoutGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { LogoutAuthLogoutGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   const body = {
     // string (optional)
     returnUrl: returnUrl_example,
-  } satisfies LogoutAuthLogoutGetRequest;
+  } satisfies LogoutAuthLogoutGetRequest
 
   try {
-    const data = await api.logoutAuthLogoutGet(body);
-    console.log(data);
+    const data = await api.logoutAuthLogoutGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **returnUrl** | `string` |  | [Optional] [Defaults to `undefined`] |
+| Name          | Type     | Description | Notes                                |
+| ------------- | -------- | ----------- | ------------------------------------ |
+| **returnUrl** | `string` |             | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -340,15 +315,14 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## verifyTokenAuthVerifyGet
 
@@ -361,42 +335,38 @@ Verify a session token. Returns user info if valid.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  AuthApi,
-} from '@saiden/tensors';
-import type { VerifyTokenAuthVerifyGetRequest } from '@saiden/tensors';
+import { Configuration, AuthApi } from '@saiden/tensors'
+import type { VerifyTokenAuthVerifyGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const api = new AuthApi();
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const api = new AuthApi()
 
   const body = {
     // string (optional)
     token: token_example,
     // string (optional)
     tensorsSession: tensorsSession_example,
-  } satisfies VerifyTokenAuthVerifyGetRequest;
+  } satisfies VerifyTokenAuthVerifyGetRequest
 
   try {
-    const data = await api.verifyTokenAuthVerifyGet(body);
-    console.log(data);
+    const data = await api.verifyTokenAuthVerifyGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **token** | `string` |  | [Optional] [Defaults to `undefined`] |
-| **tensorsSession** | `string` |  | [Optional] [Defaults to `undefined`] |
+| Name               | Type     | Description | Notes                                |
+| ------------------ | -------- | ----------- | ------------------------------------ |
+| **token**          | `string` |             | [Optional] [Defaults to `undefined`] |
+| **tensorsSession** | `string` |             | [Optional] [Defaults to `undefined`] |
 
 ### Return type
 
@@ -411,12 +381,11 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-

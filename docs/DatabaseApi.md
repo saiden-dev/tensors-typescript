@@ -1,21 +1,19 @@
 # DatabaseApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**cacheModelApiDbCachePost**](DatabaseApi.md#cachemodelapidbcachepost) | **POST** /api/db/cache | Cache Model |
-| [**getFileApiDbFilesFileIdGet**](DatabaseApi.md#getfileapidbfilesfileidget) | **GET** /api/db/files/{file_id} | Get File |
-| [**getModelApiDbModelsCivitaiIdGet**](DatabaseApi.md#getmodelapidbmodelscivitaiidget) | **GET** /api/db/models/{civitai_id} | Get Model |
-| [**getStatsApiDbStatsGet**](DatabaseApi.md#getstatsapidbstatsget) | **GET** /api/db/stats | Get Stats |
-| [**getTriggersByPathApiDbTriggersGet**](DatabaseApi.md#gettriggersbypathapidbtriggersget) | **GET** /api/db/triggers | Get Triggers By Path |
+| Method                                                                                                            | HTTP request                          | Description             |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------------------- |
+| [**cacheModelApiDbCachePost**](DatabaseApi.md#cachemodelapidbcachepost)                                           | **POST** /api/db/cache                | Cache Model             |
+| [**getFileApiDbFilesFileIdGet**](DatabaseApi.md#getfileapidbfilesfileidget)                                       | **GET** /api/db/files/{file_id}       | Get File                |
+| [**getModelApiDbModelsCivitaiIdGet**](DatabaseApi.md#getmodelapidbmodelscivitaiidget)                             | **GET** /api/db/models/{civitai_id}   | Get Model               |
+| [**getStatsApiDbStatsGet**](DatabaseApi.md#getstatsapidbstatsget)                                                 | **GET** /api/db/stats                 | Get Stats               |
+| [**getTriggersByPathApiDbTriggersGet**](DatabaseApi.md#gettriggersbypathapidbtriggersget)                         | **GET** /api/db/triggers              | Get Triggers By Path    |
 | [**getTriggersByVersionApiDbTriggersVersionIdGet**](DatabaseApi.md#gettriggersbyversionapidbtriggersversionidget) | **GET** /api/db/triggers/{version_id} | Get Triggers By Version |
-| [**linkFilesApiDbLinkPost**](DatabaseApi.md#linkfilesapidblinkpost) | **POST** /api/db/link | Link Files |
-| [**listFilesApiDbFilesGet**](DatabaseApi.md#listfilesapidbfilesget) | **GET** /api/db/files | List Files |
-| [**scanDirectoryApiDbScanPost**](DatabaseApi.md#scandirectoryapidbscanpost) | **POST** /api/db/scan | Scan Directory |
-| [**searchModelsApiDbModelsGet**](DatabaseApi.md#searchmodelsapidbmodelsget) | **GET** /api/db/models | Search Models |
-
-
+| [**linkFilesApiDbLinkPost**](DatabaseApi.md#linkfilesapidblinkpost)                                               | **POST** /api/db/link                 | Link Files              |
+| [**listFilesApiDbFilesGet**](DatabaseApi.md#listfilesapidbfilesget)                                               | **GET** /api/db/files                 | List Files              |
+| [**scanDirectoryApiDbScanPost**](DatabaseApi.md#scandirectoryapidbscanpost)                                       | **POST** /api/db/scan                 | Scan Directory          |
+| [**searchModelsApiDbModelsGet**](DatabaseApi.md#searchmodelsapidbmodelsget)                                       | **GET** /api/db/models                | Search Models           |
 
 ## cacheModelApiDbCachePost
 
@@ -36,7 +34,7 @@ import type { CacheModelApiDbCachePostRequest } from '@saiden/tensors';
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -63,10 +61,9 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **cacheRequest** | [CacheRequest](CacheRequest.md) |  | |
+| Name             | Type                            | Description | Notes |
+| ---------------- | ------------------------------- | ----------- | ----- |
+| **cacheRequest** | [CacheRequest](CacheRequest.md) |             |       |
 
 ### Return type
 
@@ -81,15 +78,14 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getFileApiDbFilesFileIdGet
 
@@ -102,45 +98,41 @@ Get local file by ID.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { GetFileApiDbFilesFileIdGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { GetFileApiDbFilesFileIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   const body = {
     // number
     fileId: 56,
-  } satisfies GetFileApiDbFilesFileIdGetRequest;
+  } satisfies GetFileApiDbFilesFileIdGetRequest
 
   try {
-    const data = await api.getFileApiDbFilesFileIdGet(body);
-    console.log(data);
+    const data = await api.getFileApiDbFilesFileIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **fileId** | `number` |  | [Defaults to `undefined`] |
+| Name       | Type     | Description | Notes                     |
+| ---------- | -------- | ----------- | ------------------------- |
+| **fileId** | `number` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -155,15 +147,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getModelApiDbModelsCivitaiIdGet
 
@@ -176,45 +167,41 @@ Get cached model by CivitAI ID.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { GetModelApiDbModelsCivitaiIdGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { GetModelApiDbModelsCivitaiIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   const body = {
     // number
     civitaiId: 56,
-  } satisfies GetModelApiDbModelsCivitaiIdGetRequest;
+  } satisfies GetModelApiDbModelsCivitaiIdGetRequest
 
   try {
-    const data = await api.getModelApiDbModelsCivitaiIdGet(body);
-    console.log(data);
+    const data = await api.getModelApiDbModelsCivitaiIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **civitaiId** | `number` |  | [Defaults to `undefined`] |
+| Name          | Type     | Description | Notes                     |
+| ------------- | -------- | ----------- | ------------------------- |
+| **civitaiId** | `number` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -229,15 +216,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getStatsApiDbStatsGet
 
@@ -250,32 +236,29 @@ Get database statistics.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { GetStatsApiDbStatsGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { GetStatsApiDbStatsGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   try {
-    const data = await api.getStatsApiDbStatsGet();
-    console.log(data);
+    const data = await api.getStatsApiDbStatsGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -295,14 +278,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getTriggersByPathApiDbTriggersGet
 
@@ -315,44 +297,40 @@ Get trigger words for a local file by path.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { GetTriggersByPathApiDbTriggersGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { GetTriggersByPathApiDbTriggersGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   const body = {
     // string | Path to safetensor file
     filePath: filePath_example,
-  } satisfies GetTriggersByPathApiDbTriggersGetRequest;
+  } satisfies GetTriggersByPathApiDbTriggersGetRequest
 
   try {
-    const data = await api.getTriggersByPathApiDbTriggersGet(body);
-    console.log(data);
+    const data = await api.getTriggersByPathApiDbTriggersGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
+| Name         | Type     | Description             | Notes                     |
+| ------------ | -------- | ----------------------- | ------------------------- |
 | **filePath** | `string` | Path to safetensor file | [Defaults to `undefined`] |
 
 ### Return type
@@ -368,15 +346,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## getTriggersByVersionApiDbTriggersVersionIdGet
 
@@ -389,45 +366,41 @@ Get trigger words for a version by CivitAI version ID.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { GetTriggersByVersionApiDbTriggersVersionIdGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { GetTriggersByVersionApiDbTriggersVersionIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   const body = {
     // number
     versionId: 56,
-  } satisfies GetTriggersByVersionApiDbTriggersVersionIdGetRequest;
+  } satisfies GetTriggersByVersionApiDbTriggersVersionIdGetRequest
 
   try {
-    const data = await api.getTriggersByVersionApiDbTriggersVersionIdGet(body);
-    console.log(data);
+    const data = await api.getTriggersByVersionApiDbTriggersVersionIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **versionId** | `number` |  | [Defaults to `undefined`] |
+| Name          | Type     | Description | Notes                     |
+| ------------- | -------- | ----------- | ------------------------- |
+| **versionId** | `number` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -442,15 +415,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## linkFilesApiDbLinkPost
 
@@ -463,32 +435,29 @@ Link unlinked local files to CivitAI by hash lookup.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { LinkFilesApiDbLinkPostRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { LinkFilesApiDbLinkPostRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   try {
-    const data = await api.linkFilesApiDbLinkPost();
-    console.log(data);
+    const data = await api.linkFilesApiDbLinkPost()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -508,14 +477,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## listFilesApiDbFilesGet
 
@@ -528,32 +496,29 @@ List all local files with CivitAI info.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { ListFilesApiDbFilesGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { ListFilesApiDbFilesGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   try {
-    const data = await api.listFilesApiDbFilesGet();
-    console.log(data);
+    const data = await api.listFilesApiDbFilesGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -573,14 +538,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## scanDirectoryApiDbScanPost
 
@@ -601,7 +565,7 @@ import type { ScanDirectoryApiDbScanPostRequest } from '@saiden/tensors';
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -628,10 +592,9 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scanRequest** | [ScanRequest](ScanRequest.md) |  | |
+| Name            | Type                          | Description | Notes |
+| --------------- | ----------------------------- | ----------- | ----- |
+| **scanRequest** | [ScanRequest](ScanRequest.md) |             |       |
 
 ### Return type
 
@@ -646,15 +609,14 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## searchModelsApiDbModelsGet
 
@@ -667,21 +629,18 @@ Search cached models offline.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DatabaseApi,
-} from '@saiden/tensors';
-import type { SearchModelsApiDbModelsGetRequest } from '@saiden/tensors';
+import { Configuration, DatabaseApi } from '@saiden/tensors'
+import type { SearchModelsApiDbModelsGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DatabaseApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DatabaseApi(config)
 
   const body = {
     // string | Search query (optional)
@@ -692,29 +651,28 @@ async function example() {
     base: base_example,
     // number | Max results (optional)
     limit: 56,
-  } satisfies SearchModelsApiDbModelsGetRequest;
+  } satisfies SearchModelsApiDbModelsGetRequest
 
   try {
-    const data = await api.searchModelsApiDbModelsGet(body);
-    console.log(data);
+    const data = await api.searchModelsApiDbModelsGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **query** | `string` | Search query | [Optional] [Defaults to `undefined`] |
-| **type** | `string` | Model type filter | [Optional] [Defaults to `undefined`] |
-| **base** | `string` | Base model filter | [Optional] [Defaults to `undefined`] |
-| **limit** | `number` | Max results | [Optional] [Defaults to `20`] |
+| Name      | Type     | Description       | Notes                                |
+| --------- | -------- | ----------------- | ------------------------------------ |
+| **query** | `string` | Search query      | [Optional] [Defaults to `undefined`] |
+| **type**  | `string` | Model type filter | [Optional] [Defaults to `undefined`] |
+| **base**  | `string` | Base model filter | [Optional] [Defaults to `undefined`] |
+| **limit** | `number` | Max results       | [Optional] [Defaults to `20`]        |
 
 ### Return type
 
@@ -729,12 +687,11 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-

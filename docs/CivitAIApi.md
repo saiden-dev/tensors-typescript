@@ -1,12 +1,10 @@
 # CivitAIApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**getModelApiCivitaiModelModelIdGet**](CivitAIApi.md#getmodelapicivitaimodelmodelidget) | **GET** /api/civitai/model/{model_id} | Get Model |
-
-
+| Method                                                                                   | HTTP request                          | Description |
+| ---------------------------------------------------------------------------------------- | ------------------------------------- | ----------- |
+| [**getModelApiCivitaiModelModelIdGet**](CivitAIApi.md#getmodelapicivitaimodelmodelidget) | **GET** /api/civitai/model/{model_id} | Get Model   |
 
 ## getModelApiCivitaiModelModelIdGet
 
@@ -19,45 +17,41 @@ Get model details from CivitAI and cache to database.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  CivitAIApi,
-} from '@saiden/tensors';
-import type { GetModelApiCivitaiModelModelIdGetRequest } from '@saiden/tensors';
+import { Configuration, CivitAIApi } from '@saiden/tensors'
+import type { GetModelApiCivitaiModelModelIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new CivitAIApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new CivitAIApi(config)
 
   const body = {
     // number
     modelId: 56,
-  } satisfies GetModelApiCivitaiModelModelIdGetRequest;
+  } satisfies GetModelApiCivitaiModelModelIdGetRequest
 
   try {
-    const data = await api.getModelApiCivitaiModelModelIdGet(body);
-    console.log(data);
+    const data = await api.getModelApiCivitaiModelModelIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **modelId** | `number` |  | [Defaults to `undefined`] |
+| Name        | Type     | Description | Notes                     |
+| ----------- | -------- | ----------- | ------------------------- |
+| **modelId** | `number` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -72,12 +66,11 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-

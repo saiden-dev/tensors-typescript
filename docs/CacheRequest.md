@@ -1,13 +1,12 @@
-
 # CacheRequest
 
 Request body for caching a model.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`modelId` | number
+| Name      | Type   |
+| --------- | ------ |
+| `modelId` | number |
 
 ## Example
 
@@ -16,7 +15,7 @@ import type { CacheRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "modelId": null,
+  modelId: null,
 } satisfies CacheRequest
 
 console.log(example)
@@ -31,5 +30,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

@@ -1,13 +1,12 @@
-
 # ScanRequest
 
 Request body for directory scan.
 
 ## Properties
 
-Name | Type
------------- | -------------
-`directory` | string
+| Name        | Type   |
+| ----------- | ------ |
+| `directory` | string |
 
 ## Example
 
@@ -16,7 +15,7 @@ import type { ScanRequest } from '@saiden/tensors'
 
 // TODO: Update the object below with actual values
 const example = {
-  "directory": null,
+  directory: null,
 } satisfies ScanRequest
 
 console.log(example)
@@ -31,5 +30,3 @@ console.log(exampleParsed)
 ```
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-

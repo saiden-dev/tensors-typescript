@@ -1,14 +1,12 @@
 # DownloadApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**getDownloadStatusApiDownloadStatusDownloadIdGet**](DownloadApi.md#getdownloadstatusapidownloadstatusdownloadidget) | **GET** /api/download/status/{download_id} | Get Download Status |
-| [**listActiveDownloadsApiDownloadActiveGet**](DownloadApi.md#listactivedownloadsapidownloadactiveget) | **GET** /api/download/active | List Active Downloads |
-| [**startDownloadApiDownloadPost**](DownloadApi.md#startdownloadapidownloadpost) | **POST** /api/download | Start Download |
-
-
+| Method                                                                                                                | HTTP request                               | Description           |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------- |
+| [**getDownloadStatusApiDownloadStatusDownloadIdGet**](DownloadApi.md#getdownloadstatusapidownloadstatusdownloadidget) | **GET** /api/download/status/{download_id} | Get Download Status   |
+| [**listActiveDownloadsApiDownloadActiveGet**](DownloadApi.md#listactivedownloadsapidownloadactiveget)                 | **GET** /api/download/active               | List Active Downloads |
+| [**startDownloadApiDownloadPost**](DownloadApi.md#startdownloadapidownloadpost)                                       | **POST** /api/download                     | Start Download        |
 
 ## getDownloadStatusApiDownloadStatusDownloadIdGet
 
@@ -21,45 +19,41 @@ Get status of a download.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DownloadApi,
-} from '@saiden/tensors';
-import type { GetDownloadStatusApiDownloadStatusDownloadIdGetRequest } from '@saiden/tensors';
+import { Configuration, DownloadApi } from '@saiden/tensors'
+import type { GetDownloadStatusApiDownloadStatusDownloadIdGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DownloadApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DownloadApi(config)
 
   const body = {
     // string
     downloadId: downloadId_example,
-  } satisfies GetDownloadStatusApiDownloadStatusDownloadIdGetRequest;
+  } satisfies GetDownloadStatusApiDownloadStatusDownloadIdGetRequest
 
   try {
-    const data = await api.getDownloadStatusApiDownloadStatusDownloadIdGet(body);
-    console.log(data);
+    const data = await api.getDownloadStatusApiDownloadStatusDownloadIdGet(body)
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **downloadId** | `string` |  | [Defaults to `undefined`] |
+| Name           | Type     | Description | Notes                     |
+| -------------- | -------- | ----------- | ------------------------- |
+| **downloadId** | `string` |             | [Defaults to `undefined`] |
 
 ### Return type
 
@@ -74,15 +68,14 @@ example().catch(console.error);
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## listActiveDownloadsApiDownloadActiveGet
 
@@ -95,32 +88,29 @@ List all active/recent downloads.
 ### Example
 
 ```ts
-import {
-  Configuration,
-  DownloadApi,
-} from '@saiden/tensors';
-import type { ListActiveDownloadsApiDownloadActiveGetRequest } from '@saiden/tensors';
+import { Configuration, DownloadApi } from '@saiden/tensors'
+import type { ListActiveDownloadsApiDownloadActiveGetRequest } from '@saiden/tensors'
 
 async function example() {
-  console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  console.log('🚀 Testing @saiden/tensors SDK...')
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
-    apiKey: "YOUR API KEY",
+    apiKey: 'YOUR API KEY',
     // To configure API key authorization: APIKeyQuery
-    apiKey: "YOUR API KEY",
-  });
-  const api = new DownloadApi(config);
+    apiKey: 'YOUR API KEY',
+  })
+  const api = new DownloadApi(config)
 
   try {
-    const data = await api.listActiveDownloadsApiDownloadActiveGet();
-    console.log(data);
+    const data = await api.listActiveDownloadsApiDownloadActiveGet()
+    console.log(data)
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
 
 // Run the test
-example().catch(console.error);
+example().catch(console.error)
 ```
 
 ### Parameters
@@ -140,14 +130,13 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
 
 ## startDownloadApiDownloadPost
 
@@ -168,7 +157,7 @@ import type { StartDownloadApiDownloadPostRequest } from '@saiden/tensors';
 
 async function example() {
   console.log("🚀 Testing @saiden/tensors SDK...");
-  const config = new Configuration({ 
+  const config = new Configuration({
     // To configure API key authorization: APIKeyHeader
     apiKey: "YOUR API KEY",
     // To configure API key authorization: APIKeyQuery
@@ -195,10 +184,9 @@ example().catch(console.error);
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **downloadRequest** | [DownloadRequest](DownloadRequest.md) |  | |
+| Name                | Type                                  | Description | Notes |
+| ------------------- | ------------------------------------- | ----------- | ----- |
+| **downloadRequest** | [DownloadRequest](DownloadRequest.md) |             |       |
 
 ### Return type
 
@@ -213,12 +201,11 @@ example().catch(console.error);
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
-
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful Response |  -  |
-| **422** | Validation Error |  -  |
+
+| Status code | Description         | Response headers |
+| ----------- | ------------------- | ---------------- |
+| **200**     | Successful Response | -                |
+| **422**     | Validation Error    | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
