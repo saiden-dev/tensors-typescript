@@ -169,4 +169,4 @@ npm publish
 
 ## License
 
-[]()
+[BSL-1.1](LICENSE)
